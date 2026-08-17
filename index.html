@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#f8f4eb">
 <title>Berivan & Oğuzhan | Düğün Davetiyesi</title>
 <style>
@@ -20,24 +20,20 @@
 .map-card{width:min(760px,100%);border:1px solid rgba(177,138,67,.35);padding:30px;background:rgba(255,255,255,.5);text-align:center}.address{font:400 clamp(19px,3vw,25px)/1.65 'Cormorant Garamond',serif}.map-btn{display:inline-block;margin-top:20px;padding:13px 22px;border:1px solid var(--gold);border-radius:999px;color:#7f612d;text-decoration:none;font-size:11px;letter-spacing:.12em;background:rgba(255,255,255,.55)}
 .closing{text-align:center}.closing-heart{font-size:48px;color:var(--gold);margin:12px}.footer-date{font-size:12px;letter-spacing:.2em;color:#987238;margin-top:28px}
 .music-note{position:fixed;top:14px;right:14px;z-index:20;font-size:11px;color:#967136;opacity:.7;background:rgba(255,253,248,.8);padding:8px 12px;border:1px solid rgba(177,138,67,.25);border-radius:999px;backdrop-filter:blur(5px)}
-
-/* Açılış: kullanıcı dokunuşu ile başlayan kısa video hissi veren geçiş */
-.intro{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 35%,#fff,#f3ead8 64%,#e6d1a9);cursor:pointer;overflow:hidden}
-.intro.hide{pointer-events:none}.intro-inner{text-align:center;position:relative;z-index:2;padding:28px;animation:breath 2.6s ease-in-out infinite}.intro-kicker{font-size:11px;letter-spacing:.28em;color:#99763b;text-transform:uppercase}.intro-main{font:clamp(42px,10vw,82px) 'Great Vibes',cursive;color:var(--gold);margin:18px 0}.intro-copy{font:400 clamp(18px,3.5vw,28px)/1.5 'Cormorant Garamond',serif;color:#5d4f3a;max-width:560px;margin:auto}.intro-small{font-size:10px;letter-spacing:.14em;color:#967239;margin-top:22px;text-transform:uppercase}
+.intro{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 35%,#fff,#f3ead8 64%,#e6d1a9);cursor:pointer;overflow:hidden;opacity:1;visibility:visible;transition:opacity 1.1s ease,visibility 1.1s ease}
+.intro.hide{opacity:0;visibility:hidden;pointer-events:none}
+.intro-inner{text-align:center;position:relative;z-index:2;padding:28px;animation:breath 2.6s ease-in-out infinite}.intro-kicker{font-size:11px;letter-spacing:.28em;color:#99763b;text-transform:uppercase}.intro-main{font:clamp(42px,10vw,82px) 'Great Vibes',cursive;color:var(--gold);margin:18px 0}.intro-copy{font:400 clamp(18px,3.5vw,28px)/1.5 'Cormorant Garamond',serif;color:#5d4f3a;max-width:560px;margin:auto}.intro-small{font-size:10px;letter-spacing:.14em;color:#967239;margin-top:22px;text-transform:uppercase}
 .intro::before{content:"";position:absolute;width:180vmax;height:180vmax;border-radius:50%;border:1px solid rgba(177,138,67,.18);animation:spin 18s linear infinite}.intro::after{content:"";position:absolute;inset:-20%;background:radial-gradient(circle at 50% 50%,rgba(255,255,255,.3),transparent 35%);animation:glow 3.2s ease-in-out infinite}
 .intro.play .intro-inner{animation:introOut 1.25s ease forwards}.intro.play::before{animation:iris 1.7s ease forwards}.intro.play::after{animation:fadeAway 1.5s ease forwards}
 @keyframes breath{0%,100%{transform:translateY(0);opacity:.96}50%{transform:translateY(-6px);opacity:1}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes glow{0%,100%{opacity:.5}50%{opacity:1}}@keyframes introOut{to{opacity:0;transform:scale(1.08);filter:blur(2px)}}@keyframes iris{to{transform:scale(.15);opacity:0}}@keyframes fadeAway{to{opacity:0}}
-.reveal{opacity:0;transform:translateY(35px);transition:.9s ease}.reveal.visible{opacity:1;transform:none}
+.reveal{opacity:1;transform:none}.js .reveal{opacity:0;transform:translateY(35px);transition:opacity .9s ease,transform .9s ease}.js .reveal.visible{opacity:1;transform:none}
 @media(max-width:700px){.section{min-height:auto;padding:90px 22px}.hero{min-height:100svh}.details{grid-template-columns:1fr;gap:12px}.detail{padding:17px}.section::before,.section::after{width:90px;height:90px}.photo-wrap{width:min(92vw,520px)}.music-note{font-size:9px;padding:7px 9px}}
 @media(min-width:701px){.section{min-height:920px}}
 </style>
 </head>
 <body>
-<audio id="music" loop preload="auto" playsinline>
-  <source src="wedding.mp3" type="audio/mpeg">
-</audio>
+<audio id="music" loop preload="auto" playsinline><source src="wedding.mp3" type="audio/mpeg"></audio>
 <div class="music-note">♪</div>
-
 <div class="intro" id="intro" aria-label="Davetiye giriş ekranı">
   <div class="intro-inner">
     <div class="intro-kicker">Birlikte bir ömür</div>
@@ -46,72 +42,21 @@
     <div class="intro-small">Ekrana dokunun</div>
   </div>
 </div>
-
 <main class="page">
-  <section class="section hero reveal">
-    <div class="hero-inner">
-      <div class="eyebrow">Düğün Davetiyesi</div>
-      <div class="names">Berivan <span class="amp">&amp;</span> Oğuzhan</div>
-      <div class="date">17 Eylül 2026 · 19:00</div>
-      <p class="hero-note">Sevgiyle başlayan hikâyemizi, sevdiklerimizin şahitliğinde sonsuzluğa taşıyoruz.</p>
-    </div>
-  </section>
-
-  <section class="section reveal">
-    <div style="width:100%;text-align:center">
-      <div class="photo-wrap"><img class="photo" src="wedding.jpg" alt="Berivan ve Oğuzhan"></div>
-      <h2 class="title">Sizleri de aramızda görmekten mutluluk duyarız.</h2>
-      <p class="text">Bu anlamlı günümüzde sevincimizi paylaşmanız, bizim için en güzel hatıralardan biri olacak.</p>
-    </div>
-  </section>
-
-  <section class="section reveal">
-    <div style="width:100%">
-      <h2 class="title">Düğünümüz</h2>
-      <div class="details">
-        <div class="detail"><small>Tarih</small><strong>17 Eylül</strong><span>Perşembe</span></div>
-        <div class="detail"><small>Saat</small><strong>19:00</strong><span>Akşam</span></div>
-        <div class="detail"><small>Yer</small><strong>Wedding Parkpoint</strong><span>Adana</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section reveal">
-    <div class="map-card">
-      <h2 class="title" style="margin-bottom:18px">Buluşma Noktamız</h2>
-      <div class="address">Wedding Parkpoint<br>Ziyapaşa, Kasım Gülek Blv.<br>01140 Seyhan / Adana</div>
-      <a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x15288ff49d802be1:0xbd60aa8a2805d9b1?sa=X&amp;ved=1t:8290&amp;ictx=111">YOL TARİFİ AL</a>
-    </div>
-  </section>
-
-  <section class="section closing reveal">
-    <div>
-      <div class="closing-heart">♡</div>
-      <div class="names" style="margin:10px 0 24px">Berivan &amp; Oğuzhan</div>
-      <p class="text">Bu özel günümüzde yanımızda olmanız dileğiyle...</p>
-      <div class="footer-date">17 · 09 · 2026</div>
-    </div>
-  </section>
+<section class="section hero reveal"><div class="hero-inner"><div class="eyebrow">Düğün Davetiyesi</div><div class="names">Berivan <span class="amp">&amp;</span> Oğuzhan</div><div class="date">17 Eylül 2026 · 19:00</div><p class="hero-note">Sevgiyle başlayan hikâyemizi, sevdiklerimizin şahitliğinde sonsuzluğa taşıyoruz.</p></div></section>
+<section class="section reveal"><div style="width:100%;text-align:center"><div class="photo-wrap"><img class="photo" src="wedding.jpg" alt="Berivan ve Oğuzhan"></div><h2 class="title">Sizleri de aramızda görmekten mutluluk duyarız.</h2><p class="text">Bu anlamlı günümüzde sevincimizi paylaşmanız, bizim için en güzel hatıralardan biri olacak.</p></div></section>
+<section class="section reveal"><div style="width:100%"><h2 class="title">Düğünümüz</h2><div class="details"><div class="detail"><small>Tarih</small><strong>17 Eylül</strong><span>Perşembe</span></div><div class="detail"><small>Saat</small><strong>19:00</strong><span>Akşam</span></div><div class="detail"><small>Yer</small><strong>Wedding Parkpoint</strong><span>Adana</span></div></div></div></section>
+<section class="section reveal"><div class="map-card"><h2 class="title" style="margin-bottom:18px">Buluşma Noktamız</h2><div class="address">Wedding Parkpoint<br>Ziyapaşa, Kasım Gülek Blv.<br>01140 Seyhan / Adana</div><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x15288ff49d802be1:0xbd60aa8a2805d9b1?sa=X&amp;ved=1t:8290&amp;ictx=111">YOL TARİFİ AL</a></div></section>
+<section class="section closing reveal"><div><div class="closing-heart">♡</div><div class="names" style="margin:10px 0 24px">Berivan &amp; Oğuzhan</div><p class="text">Bu özel günümüzde yanımızda olmanız dileğiyle...</p><div class="footer-date">17 · 09 · 2026</div></div></section>
 </main>
-
 <script>
-const intro=document.getElementById('intro');
-const music=document.getElementById('music');
+document.body.classList.add('js');
+const intro=document.getElementById('intro'), music=document.getElementById('music');
 let started=false;
-async function startMusic(){if(started)return;try{await music.play();started=true;}catch(e){}}
-
-/* Tarayıcı izin verirse sayfa açılır açılmaz müzik başlar. Mobilde ilk dokunuş
-   gerekir; aynı dokunuş aşağıdaki zarif giriş geçişini de başlatır. */
+async function startMusic(){if(started)return;try{await music.play();started=true}catch(e){}}
 startMusic();
-intro.addEventListener('click',async()=>{
-  await startMusic();
-  intro.classList.add('play');
-  setTimeout(()=>intro.classList.add('hide'),1200);
-},{once:true});
-
-const observer=new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible')});
-},{threshold:.12});
+intro.addEventListener('click',async()=>{await startMusic();intro.classList.add('play');setTimeout(()=>intro.classList.add('hide'),1200)},{once:true});
+const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible')})},{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 </script>
 </body>

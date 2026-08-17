@@ -2,48 +2,21 @@
 <html lang="tr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#f7f1e5">
 <title>Berivan & Oğuzhan | Düğün Davetiyesi</title>
 <style>
 :root{--gold:#b28a45;--gold-light:#ddc89a;--ink:#3f372d;--cream:#faf6ee;--white:#fffdf8}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}
 main{width:100%;max-width:1100px;margin:auto;background:var(--white)}
 section{position:relative;min-height:100vh;min-height:100svh;padding:72px 22px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
-.hero{background:linear-gradient(180deg,#fffdf8,#f7f1e5)}
-.section-inner{width:min(900px,100%);position:relative;z-index:2}
-.ornament{width:120px;height:1px;background:var(--gold-light);margin:22px auto;position:relative}
-.ornament:before,.ornament:after{content:"";position:absolute;top:50%;width:8px;height:8px;border:1px solid var(--gold);transform:translateY(-50%) rotate(45deg);background:var(--white)}
-.ornament:before{left:0}.ornament:after{right:0}
-.kicker{font-size:11px;letter-spacing:.32em;color:#9c793d;text-transform:uppercase}
-.names{font-family:Georgia,'Times New Roman',serif;color:var(--gold);font-size:clamp(48px,10vw,104px);line-height:1.02;margin:20px 0 10px}
-.names .amp{font-size:.52em}
-.date{font-family:Georgia,'Times New Roman',serif;font-size:clamp(22px,4vw,34px);letter-spacing:.08em;color:#5d4e3c}
-.quote{max-width:720px;margin:28px auto 0;font-family:Georgia,'Times New Roman',serif;font-size:clamp(18px,3vw,25px);line-height:1.7;color:#625443}
-.photo-frame{width:min(620px,92vw);margin:0 auto}
-.photo-frame:before{content:"";display:block;position:absolute;width:min(620px,92vw);height:80%;border:1px solid rgba(178,138,69,.55);transform:translate(14px,14px);z-index:-1}
-.photo{display:block;width:100%;height:auto;max-height:78vh;object-fit:cover;border:8px solid #fff;box-shadow:0 24px 55px rgba(55,42,25,.18)}
-.title{font-family:Georgia,'Times New Roman',serif;font-size:clamp(32px,6vw,54px);font-weight:400;color:var(--gold);margin:0 0 20px}
-.text{font-family:Georgia,'Times New Roman',serif;font-size:clamp(18px,3vw,24px);line-height:1.8;max-width:760px;margin:0 auto;color:#5f5241}
-.details{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
-.detail{padding:24px 14px;border-top:1px solid rgba(178,138,69,.35);border-bottom:1px solid rgba(178,138,69,.35)}
-.detail small{display:block;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#9a7638;margin-bottom:10px}.detail strong{display:block;font-family:Georgia,'Times New Roman',serif;font-size:clamp(24px,4vw,34px);font-weight:400;color:#594831}.detail span{font-size:13px;color:#7a6b57}
-.map-card{width:min(760px,100%);padding:34px 22px;border:1px solid rgba(178,138,69,.35);background:rgba(255,255,255,.55)}
-.address{font-family:Georgia,'Times New Roman',serif;font-size:clamp(19px,3vw,26px);line-height:1.7;color:#5d4e3c}
-.map-btn{display:inline-block;margin-top:22px;padding:13px 24px;border:1px solid var(--gold);border-radius:999px;text-decoration:none;color:#7c5e2b;background:#fff;font-size:11px;letter-spacing:.12em}
-.close-heart{font-size:50px;color:var(--gold);margin-bottom:8px}.footer{margin-top:26px;font-size:11px;letter-spacing:.22em;color:#987238}
-.music-badge{position:fixed;right:14px;top:14px;z-index:30;width:36px;height:36px;border-radius:50%;border:1px solid rgba(178,138,69,.4);background:rgba(255,253,248,.88);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:15px}
-/* Giriş animasyonu */
-.intro{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:24px;background:radial-gradient(circle at center,#fffdf8 0%,#f3e8d4 68%,#e2cca0 100%);cursor:pointer;transition:opacity 1s ease,visibility 1s ease}
-.intro.hidden{opacity:0;visibility:hidden;pointer-events:none}
-.intro-card{position:relative;width:min(620px,92vw);padding:38px 22px;border:1px solid rgba(178,138,69,.55);background:rgba(255,253,248,.82);box-shadow:0 22px 70px rgba(83,61,24,.14);overflow:hidden}
-.intro-card:before{content:"";position:absolute;inset:-120px;background:conic-gradient(from 0deg,transparent 0 70%,rgba(255,255,255,.65),transparent 78%);animation:shine 4.5s linear infinite}
-.intro-content{position:relative;z-index:2}
-.intro-small{font-size:10px;letter-spacing:.22em;color:#99743a;text-transform:uppercase}.intro-main{font-family:Georgia,'Times New Roman',serif;color:var(--gold);font-size:clamp(40px,9vw,78px);line-height:1.05;margin:16px 0}.intro-text{font-family:Georgia,'Times New Roman',serif;font-size:clamp(18px,3vw,24px);line-height:1.5;color:#5f503d}.tap{font-size:10px;letter-spacing:.15em;color:#977138;margin-top:22px;text-transform:uppercase}
-.intro.opening .intro-card{animation:cardPulse 2.8s ease-in-out infinite}.intro.opening .intro-main{animation:textBreath 2.6s ease-in-out infinite}
-.intro.exit .intro-card{animation:exitCard 1s ease forwards}.intro.exit .intro-content{animation:exitText .9s ease forwards}.intro.exit:before{content:"";position:absolute;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.95);box-shadow:0 0 120px 80px rgba(255,255,255,.8);animation:expand 1.05s ease forwards}
+.hero{background:linear-gradient(180deg,#fffdf8,#f7f1e5)}.section-inner{width:min(900px,100%);position:relative;z-index:2}.ornament{width:120px;height:1px;background:var(--gold-light);margin:22px auto;position:relative}.ornament:before,.ornament:after{content:"";position:absolute;top:50%;width:8px;height:8px;border:1px solid var(--gold);transform:translateY(-50%) rotate(45deg);background:var(--white)}.ornament:before{left:0}.ornament:after{right:0}
+.kicker{font-size:11px;letter-spacing:.32em;color:#9c793d;text-transform:uppercase}.names{font-family:Georgia,'Times New Roman',serif;color:var(--gold);font-size:clamp(48px,10vw,104px);line-height:1.02;margin:20px 0 10px}.names .amp{font-size:.52em}.date{font-family:Georgia,'Times New Roman',serif;font-size:clamp(22px,4vw,34px);letter-spacing:.08em;color:#5d4e3c}.quote{max-width:720px;margin:28px auto 0;font-family:Georgia,'Times New Roman',serif;font-size:clamp(18px,3vw,25px);line-height:1.7;color:#625443}
+.photo-frame{width:min(620px,92vw);margin:0 auto;position:relative}.photo-frame:before{content:"";position:absolute;inset:12px -12px auto 12px;height:80%;border:1px solid rgba(178,138,69,.55);z-index:0}.photo{display:block;position:relative;z-index:1;width:100%;height:auto;max-height:78vh;object-fit:contain;border:8px solid #fff;box-shadow:0 24px 55px rgba(55,42,25,.18);background:#fff}
+.title{font-family:Georgia,'Times New Roman',serif;font-size:clamp(32px,6vw,54px);font-weight:400;color:var(--gold);margin:0 0 20px}.text{font-family:Georgia,'Times New Roman',serif;font-size:clamp(18px,3vw,24px);line-height:1.8;max-width:760px;margin:0 auto;color:#5f5241}.details{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}.detail{padding:24px 14px;border-top:1px solid rgba(178,138,69,.35);border-bottom:1px solid rgba(178,138,69,.35)}.detail small{display:block;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#9a7638;margin-bottom:10px}.detail strong{display:block;font-family:Georgia,'Times New Roman',serif;font-size:clamp(24px,4vw,34px);font-weight:400;color:#594831}.detail span{font-size:13px;color:#7a6b57}
+.map-card{width:min(760px,100%);padding:34px 22px;border:1px solid rgba(178,138,69,.35);background:rgba(255,255,255,.55)}.address{font-family:Georgia,'Times New Roman',serif;font-size:clamp(19px,3vw,26px);line-height:1.7;color:#5d4e3c}.map-btn{display:inline-block;margin-top:22px;padding:13px 24px;border:1px solid var(--gold);border-radius:999px;text-decoration:none;color:#7c5e2b;background:#fff;font-size:11px;letter-spacing:.12em}.close-heart{font-size:50px;color:var(--gold);margin-bottom:8px}.footer{margin-top:26px;font-size:11px;letter-spacing:.22em;color:#987238}.music-badge{position:fixed;right:14px;top:14px;z-index:30;width:36px;height:36px;border-radius:50%;border:1px solid rgba(178,138,69,.4);background:rgba(255,253,248,.88);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:15px}
+/* Açılış: kullanıcı dokunuşu ile başlayan kısa video hissi veren geçiş; buton yok */
+.intro{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:24px;background:radial-gradient(circle at center,#fffdf8 0%,#f3e8d4 68%,#e2cca0 100%);cursor:pointer;transition:opacity 1s ease,visibility 1s ease}.intro.hidden{opacity:0;visibility:hidden;pointer-events:none}.intro-card{position:relative;width:min(620px,92vw);padding:38px 22px;border:1px solid rgba(178,138,69,.55);background:rgba(255,253,248,.82);box-shadow:0 22px 70px rgba(83,61,24,.14);overflow:hidden}.intro-card:before{content:"";position:absolute;inset:-120px;background:conic-gradient(from 0deg,transparent 0 70%,rgba(255,255,255,.65),transparent 78%);animation:shine 4.5s linear infinite}.intro-content{position:relative;z-index:2}.intro-small{font-size:10px;letter-spacing:.22em;color:#99743a;text-transform:uppercase}.intro-main{font-family:Georgia,'Times New Roman',serif;color:var(--gold);font-size:clamp(40px,9vw,78px);line-height:1.05;margin:16px 0}.intro-text{font-family:Georgia,'Times New Roman',serif;font-size:clamp(18px,3vw,24px);line-height:1.5;color:#5f503d}.tap{font-size:10px;letter-spacing:.15em;color:#977138;margin-top:22px;text-transform:uppercase}.intro.opening .intro-card{animation:cardPulse 2.8s ease-in-out infinite}.intro.opening .intro-main{animation:textBreath 2.6s ease-in-out infinite}.intro.exit .intro-card{animation:exitCard 1s ease forwards}.intro.exit .intro-content{animation:exitText .9s ease forwards}.intro.exit:before{content:"";position:absolute;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.95);box-shadow:0 0 120px 80px rgba(255,255,255,.8);animation:expand 1.05s ease forwards}
 @keyframes shine{to{transform:rotate(360deg)}}@keyframes cardPulse{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}@keyframes textBreath{0%,100%{opacity:.9}50%{opacity:1}}@keyframes exitCard{to{transform:scale(1.06);opacity:0;filter:blur(3px)}}@keyframes exitText{to{transform:scale(1.05);opacity:0}}@keyframes expand{to{transform:scale(45);opacity:0}}
 @media(max-width:700px){section{min-height:auto;padding:92px 18px}.hero{min-height:100svh}.details{grid-template-columns:1fr;gap:10px}.detail{padding:18px 10px}.photo{border-width:6px}.photo-frame:before{transform:translate(9px,9px)}.map-card{padding:28px 16px}}
 @media(min-width:701px){section{min-height:860px}}
@@ -52,86 +25,22 @@ section{position:relative;min-height:100vh;min-height:100svh;padding:72px 22px;d
 <body>
 <audio id="music" preload="auto" loop playsinline><source src="wedding.mp3" type="audio/mpeg"></audio>
 <div class="music-badge">♪</div>
-
 <div class="intro opening" id="intro">
-  <div class="intro-card">
-    <div class="intro-content">
-      <div class="intro-small">Birlikte bir ömür</div>
-      <div class="intro-main">Mutluluğumuza<br>şahit olun...</div>
-      <div class="intro-text">Berivan &amp; Oğuzhan'ın bu özel gününe hoş geldiniz.</div>
-      <div class="tap">Ekrana dokunun</div>
-    </div>
-  </div>
+  <div class="intro-card"><div class="intro-content"><div class="intro-small">Birlikte bir ömür</div><div class="intro-main">Mutluluğumuza<br>şahit olun...</div><div class="intro-text">Berivan &amp; Oğuzhan'ın bu özel gününe hoş geldiniz.</div><div class="tap">Ekrana dokunun</div></div></div>
 </div>
-
 <main>
-  <section class="hero">
-    <div class="section-inner">
-      <div class="kicker">Düğün Davetiyesi</div>
-      <div class="names">Berivan <span class="amp">&amp;</span> Oğuzhan</div>
-      <div class="ornament"></div>
-      <div class="date">17 Eylül 2026 · 19:00</div>
-      <p class="quote">“Sevgiyle başlayan hikâyemizi, sevdiklerimizin şahitliğinde sonsuzluğa taşıyoruz.”</p>
-    </div>
-  </section>
-
-  <section>
-    <div class="section-inner">
-      <div class="photo-frame">
-        <img class="photo" src="wedding.jpg" alt="Berivan ve Oğuzhan">
-      </div>
-      <div style="height:30px"></div>
-      <h2 class="title">Sizleri de aramızda görmekten mutluluk duyarız.</h2>
-      <p class="text">Bu anlamlı günümüzde sevincimizi paylaşmanız, bizim için en güzel hatıralardan biri olacak.</p>
-    </div>
-  </section>
-
-  <section>
-    <div class="section-inner">
-      <h2 class="title">Düğünümüz</h2>
-      <div class="ornament"></div>
-      <div class="details">
-        <div class="detail"><small>Tarih</small><strong>17 Eylül</strong><span>Perşembe</span></div>
-        <div class="detail"><small>Saat</small><strong>19:00</strong><span>Akşam</span></div>
-        <div class="detail"><small>Yer</small><strong>Wedding Parkpoint</strong><span>Adana</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="map-card">
-      <h2 class="title">Buluşma Noktamız</h2>
-      <div class="address">Wedding Parkpoint<br>Ziyapaşa, Kasım Gülek Blv.<br>01140 Seyhan / Adana</div>
-      <a class="map-btn" href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x15288ff49d802be1:0xbd60aa8a2805d9b1?sa=X&amp;ved=1t:8290&amp;ictx=111" target="_blank" rel="noopener">YOL TARİFİ AL</a>
-    </div>
-  </section>
-
-  <section>
-    <div class="section-inner">
-      <div class="close-heart">♡</div>
-      <div class="names" style="font-size:clamp(42px,8vw,82px)">Berivan &amp; Oğuzhan</div>
-      <p class="text">Bu özel günümüzde yanımızda olmanız dileğiyle...</p>
-      <div class="footer">17 · 09 · 2026</div>
-    </div>
-  </section>
+<section class="hero"><div class="section-inner"><div class="kicker">Düğün Davetiyesi</div><div class="names">Berivan <span class="amp">&amp;</span> Oğuzhan</div><div class="ornament"></div><div class="date">17 Eylül 2026 · 19:00</div><p class="quote">“Sevgiyle başlayan hikâyemizi, sevdiklerimizin şahitliğinde sonsuzluğa taşıyoruz.”</p></div></section>
+<section><div class="section-inner"><div class="photo-frame"><img class="photo" src="wedding.jpg" alt="Berivan ve Oğuzhan"></div><div style="height:30px"></div><h2 class="title">Sizleri de aramızda görmekten mutluluk duyarız.</h2><p class="text">Bu anlamlı günümüzde sevincimizi paylaşmanız, bizim için en güzel hatıralardan biri olacak.</p></div></section>
+<section><div class="section-inner"><h2 class="title">Düğünümüz</h2><div class="ornament"></div><div class="details"><div class="detail"><small>Tarih</small><strong>17 Eylül</strong><span>Perşembe</span></div><div class="detail"><small>Saat</small><strong>19:00</strong><span>Akşam</span></div><div class="detail"><small>Yer</small><strong>Wedding Parkpoint</strong><span>Adana</span></div></div></div></section>
+<section><div class="map-card"><h2 class="title">Buluşma Noktamız</h2><div class="address">Wedding Parkpoint<br>Ziyapaşa, Kasım Gülek Blv.<br>01140 Seyhan / Adana</div><a class="map-btn" href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x15288ff49d802be1:0xbd60aa8a2805d9b1?sa=X&amp;ved=1t:8290&amp;ictx=111" target="_blank" rel="noopener">YOL TARİFİ AL</a></div></section>
+<section><div class="section-inner"><div class="close-heart">♡</div><div class="names" style="font-size:clamp(42px,8vw,82px)">Berivan &amp; Oğuzhan</div><p class="text">Bu özel günümüzde yanımızda olmanız dileğiyle...</p><div class="footer">17 · 09 · 2026</div></div></section>
 </main>
-
 <script>
-const intro=document.getElementById('intro');
-const music=document.getElementById('music');
-let played=false;
-async function playMusic(){
-  if(played) return;
-  try{ await music.play(); played=true; }catch(e){}
-}
-// İlk yüklemede dene; tarayıcı izin verirse anında başlar.
+const intro=document.getElementById('intro'),music=document.getElementById('music');let played=false;
+async function playMusic(){if(played)return;try{await music.play();played=true}catch(e){}}
+/* Sayfa açılışında tarayıcı izin verirse oynatmayı deniyoruz. Mobil tarayıcılar çoğu zaman kullanıcı dokunuşu ister; aynı dokunuş animasyonla birlikte sesi başlatır. */
 playMusic();
-intro.addEventListener('click',async()=>{
-  await playMusic();
-  intro.classList.remove('opening');
-  intro.classList.add('exit');
-  setTimeout(()=>intro.classList.add('hidden'),1000);
-},{once:true});
+intro.addEventListener('pointerdown',async()=>{await playMusic();intro.classList.remove('opening');intro.classList.add('exit');setTimeout(()=>intro.classList.add('hidden'),1000)},{once:true});
 </script>
 </body>
 </html>
